@@ -4,25 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_CriandoVariaveis
+namespace _03_ByteBank
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Executando projeto 2 - Criando variaveis");
-            int idade;
-            idade = 32;
-            Console.WriteLine(idade);
 
-            idade = 10 + 5;
-            Console.WriteLine(idade);
+            ContaCorrente contaDaGabriela = new ContaCorrente();
 
-            idade = 10 + 5 * 2;
+            contaDaGabriela.titular = "Gabriela";
+            contaDaGabriela.agencia = 863;
+            contaDaGabriela.numero = 863452;
 
-            Console.WriteLine("Sua idade é " + idade + "!");
 
-            Console.WriteLine("Execução finalizada. Tecle enter para finalizar!");
+            ContaCorrente contaDaGabrielaCosta = new ContaCorrente();
+
+            contaDaGabriela.titular = "Gabriela";
+            contaDaGabriela.agencia = 863;
+            contaDaGabriela.numero = 863452;
+
+            //igualdade de tipo de referencia. (False) Objeto guarda em endereço de mem
+            //memoria diferente dos tipos
+            Console.WriteLine(contaDaGabriela == contaDaGabrielaCosta);
+            
+
+            
             
             Console.ReadLine();
 
